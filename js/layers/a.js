@@ -261,6 +261,6 @@ addLayer("a", {
             requirementDescription: "1 total API endpoints",
             effectDescription: "Row 4 resets don't reset refactorings",
             done() { return player[this.layer].points.gte(1) }
-        }
+        } 
     }
 })
