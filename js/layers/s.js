@@ -174,37 +174,37 @@ addLayer("s", {
             done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) }
         },
         1: {
-            requirementDescription: "3 classes taken",
+            requirementDescription: "1 classes taken",
             effectDescription: "Automatically reset Update layer",
-            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(3) },
+            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) },
             toggles: [["s", "auto-update"]],
             unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) }
         },
         2: {
-            requirementDescription: "5 classes taken",
+            requirementDescription: "1 classes taken",
             effectDescription: "Automatically buy Upgrade Hardware every second",
-            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(5) },
+            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) },
             toggles: [["s", "auto-upgradehardware"]],
-            unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(3) }
+            unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) }
         },
         3: {
-            requirementDescription: "7 classes taken",
+            requirementDescription: "1 classes taken",
             effectDescription: "Retain Cash Revenue upgrades",
-            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(7) },
-            unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(5) }
+            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) },
+            unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) }
         },
         4: {
-            requirementDescription: "9 classes taken",
+            requirementDescription: "1 classes taken",
             effectDescription: "Automatically reset Experience and Cash layers every second<br/>(Recommended to only do 1 at a time)",
-            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(9) },
+            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) },
             toggles() { return hasMilestone("d", 1) ? [["s", "auto-both"]] : [["s", "auto-experience"], ["s", "auto-cash"]] },
-            unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(7) }
+            unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) }
         },
         5: {
-            requirementDescription: "25 classes taken",
+            requirementDescription: "1 classes taken",
             effectDescription: "Experience and Cash layers reset nothing, and the previous milestone can reset multiple times per tick, with diminishing returns",
-            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(25) },
-            unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(9) }
+            done() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) },
+            unlocked() { return player[this.layer].classes.add(layers.d.effect().times(4)).gte(1) }
         }
     }
 })
