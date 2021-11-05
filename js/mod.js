@@ -70,7 +70,7 @@ function getPointGen() {
 		gain = gain.divide(slowDownModifier.pow(.0625))
 		gain = gain.divide(slowDownModifier.pow(.03125))
 	}
-
+        if (hasUpgrade('u',13)) gain = gain.times(69420)
 	return gain
 }
 
