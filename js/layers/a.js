@@ -21,7 +21,7 @@ addLayer("a", {
         unused: new Decimal(0)
     }},
     layerShown() { return player[this.layer].unlocked || player.r.total.gte(8) },
-    type: "static",
+    type: "static",    
     requires: new Decimal(10),
     base: new Decimal(0.5),
     baseAmount() { return player.r.points },
