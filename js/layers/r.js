@@ -176,45 +176,45 @@ addLayer("r", {
             done() { return player[this.layer].total.gte(1) || (player.a.unlocked && !inChallenge("d", 12)) }
         },
         1: {
-            requirementDescription: "2 refactors",
+            requirementDescription: "1 refactors",
             effectDescription: "Unlock second refactoring",
-            done() { return player[this.layer].total.gte(2) || (player.a.unlocked && !inChallenge("d", 12)) }
+            done() { return player[this.layer].total.gte(1) || (player.a.unlocked && !inChallenge("d", 12)) }
         },
         2: {
-            requirementDescription: "3 refactors",
+            requirementDescription: "1 refactors",
             effectDescription: "Retain the first Experience upgrade",
-            done() { return player[this.layer].total.gte(3) },
+            done() { return player[this.layer].total.gte(1) },
             unlocked() { return player[this.layer].total.gte(1) || (player.a.unlocked && !inChallenge("d", 12)) }
         },
         3: {
-            requirementDescription: "4 refactors",
+            requirementDescription: "1 refactors",
             effectDescription: "Unlock third refactoring",
-            done() { return player[this.layer].total.gte(4) },
-            unlocked() { return player[this.layer].total.gte(2) || (player.a.unlocked && !inChallenge("d", 12)) }
+            done() { return player[this.layer].total.gte(1) },
+            unlocked() { return player[this.layer].total.gte(1) || (player.a.unlocked && !inChallenge("d", 12)) }
         },
         4: {
-            requirementDescription: "5 refactors",
+            requirementDescription: "1 refactors",
             effectDescription: "Retain the fourth Experience upgrade",
-            done() { return player[this.layer].total.gte(5) },
-            unlocked() { return player[this.layer].total.gte(3) || (player.a.unlocked && !inChallenge("d", 12)) }
+            done() { return player[this.layer].total.gte(1) },
+            unlocked() { return player[this.layer].total.gte(1) || (player.a.unlocked && !inChallenge("d", 12)) }
         },
         5: {
-            requirementDescription: "6 refactors",
+            requirementDescription: "1 refactors",
             effectDescription: "Retain the fifth Experience upgrade",
-            done() { return player[this.layer].total.gte(6) },
-            unlocked() { return player[this.layer].total.gte(4) || (player.a.unlocked && !inChallenge("d", 12)) }
+            done() { return player[this.layer].total.gte(1) },
+            unlocked() { return player[this.layer].total.gte(1) || (player.a.unlocked && !inChallenge("d", 12)) }
         },
         6: {
-            requirementDescription: "7 refactors",
+            requirementDescription: "1 refactors",
             effectDescription: "Retain the sixth Experience upgrade",
-            done() { return player[this.layer].total.gte(7) },
-            unlocked() { return player[this.layer].total.gte(5) || (player.a.unlocked && !inChallenge("d", 12)) }
+            done() { return player[this.layer].total.gte(1) },
+            unlocked() { return player[this.layer].total.gte(1) || (player.a.unlocked && !inChallenge("d", 12)) }
         },
         7: {
-            requirementDescription: "8 refactors",
+            requirementDescription: "1 refactors",
             effectDescription: "Unlock fourth refactoring",
-            done() { return player[this.layer].total.gte(8) },
-            unlocked() { return player[this.layer].total.gte(6) || (player.a.unlocked && !inChallenge("d", 12)) }
+            done() { return player[this.layer].total.gte(1) },
+            unlocked() { return player[this.layer].total.gte(1) || (player.a.unlocked && !inChallenge("d", 12)) }
         }
     }
 })
