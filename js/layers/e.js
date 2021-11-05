@@ -85,36 +85,36 @@ addLayer("e", {
         11: {
             title: "Learn a new programming language",
             description: "Wow! This programming language is so much easier to write in! Total experience now effects update gain",
-            cost: new Decimal(2),
+            cost: new Decimal(1),
             effect() { return player.e.total.times(layers.r.effect()).clampMin(1).log10().add(1) }
         },
         12: {
             title: "Contact publisher",
             description: "Use your experience to contact a publisher, unlocking an adjacent prestige layer",
-            cost: new Decimal(10)
+            cost: new Decimal(1)
         },
         13: {
             title: "Contact ad company",
             description: "Use your experience to contact an ad provider, unlocking passive cash generation",
-            cost: new Decimal(25),
+            cost: new Decimal(1),
             unlocked() { return hasUpgrade("e", 12) }
         },
         21: {
             title: "Read Game Programming Patterns",
             description: "This treasure trove of a book makes me twice as productive",
-            cost: new Decimal(100),
+            cost: new Decimal(1),
             unlocked() { return hasUpgrade("e", 12) }
         },
         22: {
             title: "Subscribe to Sebastian Lague",
             description: "Just being subscribed infuses you with enough knowledge to make you twice as productive",
-            cost: new Decimal(200),
+            cost: new Decimal(1),
             unlocked() { return hasUpgrade("e", 12) }
         },
         23: {
             title: "Play Davey Wreden's games",
             description: "Davey Wreden's insights on the relationships between games and their creators and players make you once again twice as productive",
-            cost: new Decimal(250),
+            cost: new Decimal(1),
             unlocked() { return hasUpgrade("e", 12) }
         }
     }
