@@ -68,8 +68,8 @@ addLayer("u", {
         "upgrades"
     ],
     upgrades: {
-        rows: 4,
-        cols: 3,
+        rows: 5,
+        cols: 5,
         11: {
             title: "Convince your friend to help",
             description: "Double your productivity by convincing your friend to help with your game",
