@@ -218,44 +218,44 @@ addLayer("f", {
             done() { return player[this.layer].best.gte(1) }
         },
         1: {
-            requirementDescription: "2 best fame",
+            requirementDescription: "1 best fame",
             effectDescription: "Retain the second equipment upgrade",
-            done() { return player[this.layer].best.gte(2) }
+            done() { return player[this.layer].best.gte(1) }
         },
         2: {
-            requirementDescription: "3 best fame",
+            requirementDescription: "1 best fame",
             effectDescription: "Retain the third equipment upgrade",
-            done() { return player[this.layer].best.gte(3) },
+            done() { return player[this.layer].best.gte(1) },
             unlocked() { return hasMilestone("f", 0) }
         },
         3: {
-            requirementDescription: "4 best fame",
+            requirementDescription: "1 best fame",
             effectDescription: "Retain the fourth equipment upgrade",
-            done() { return player[this.layer].best.gte(4) },
+            done() { return player[this.layer].best.gte(1) },
             unlocked() { return hasMilestone("f", 1) }
         },
         4: {
-            requirementDescription: "5 best fame",
+            requirementDescription: "1 best fame",
             effectDescription: "Retain the fifth equipment upgrade",
-            done() { return player[this.layer].best.gte(5) },
+            done() { return player[this.layer].best.gte(1) },
             unlocked() { return hasMilestone("f", 2) }
         },
         5: {
-            requirementDescription: "6 best fame",
+            requirementDescription: "1 best fame",
             effectDescription: "Retain the sixth equipment upgrade",
-            done() { return player[this.layer].best.gte(6) },
+            done() { return player[this.layer].best.gte(1) },
             unlocked() { return hasMilestone("f", 3) }
         },
         6: {
-            requirementDescription: "7 best fame",
+            requirementDescription: "1 best fame",
             effectDescription: "Retain the seventh equipment upgrade",
-            done() { return player[this.layer].best.gte(7) },
+            done() { return player[this.layer].best.gte(1) },
             unlocked() { return hasMilestone("f", 4) }
         },
         7: {
-            requirementDescription: "8 best fame",
+            requirementDescription: "1 best fame",
             effectDescription: "Retain the eighth equipment upgrade",
-            done() { return player[this.layer].best.gte(8) },
+            done() { return player[this.layer].best.gte(1) },
             unlocked() { return hasMilestone("f", 5) }
         }
     }
