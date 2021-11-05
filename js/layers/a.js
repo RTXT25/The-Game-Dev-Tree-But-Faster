@@ -23,7 +23,7 @@ addLayer("a", {
     layerShown() { return player[this.layer].unlocked || player.r.total.gte(8) },
     type: "static",
     requires: new Decimal(10),
-    base: new Decimal(1.2),
+    base: new Decimal(0.5),
     baseAmount() { return player.r.points },
     exponent: 1,
     gainMult() {
@@ -81,7 +81,7 @@ addLayer("a", {
                 const amt = x || getBuyableAmount(this.layer, this.id)
                 return {
                     endpoints: new Decimal(1).add(amt),
-                    updates: new Decimal(7500).mul(new Decimal(1).add(amt))
+                    updates: new Decimal(7).mul(new Decimal(1).add(amt))
                 }
             },
             canAfford() {
@@ -108,7 +108,7 @@ addLayer("a", {
                 const amt = x || getBuyableAmount(this.layer, this.id)
                 return {
                     endpoints: new Decimal(1).add(amt),
-                    updates: new Decimal(10000).mul(new Decimal(2).pow(amt))
+                    updates: new Decimal(1).mul(new Decimal(2).pow(amt))
                 }
             },
             canAfford() {
@@ -135,7 +135,7 @@ addLayer("a", {
                 const amt = x || getBuyableAmount(this.layer, this.id)
                 return {
                     endpoints: new Decimal(1).add(amt),
-                    updates: new Decimal(2).pow(amt).mul(50000)
+                    updates: new Decimal(2).pow(amt).mul(5)
                 }
             },
             canAfford() {
@@ -163,7 +163,7 @@ addLayer("a", {
                 const amt = x || getBuyableAmount(this.layer, this.id)
                 return {
                     endpoints: new Decimal(1).add(amt),
-                    updates: new Decimal(1000).mul(new Decimal(5).pow(new Decimal(1).add(amt)))
+                    updates: new Decimal(10).mul(new Decimal(5).pow(new Decimal(1).add(amt)))
                 }
             },
             canAfford() {
@@ -190,7 +190,7 @@ addLayer("a", {
                 const amt = x || getBuyableAmount(this.layer, this.id)
                 return {
                     endpoints: new Decimal(1).add(amt),
-                    updates: new Decimal(500).mul(new Decimal(5).pow(new Decimal(2).add(amt)))
+                    updates: new Decimal(5).mul(new Decimal(5).pow(new Decimal(2).add(amt)))
                 }
             },
             canAfford() {
@@ -217,7 +217,7 @@ addLayer("a", {
                 const amt = x || getBuyableAmount(this.layer, this.id)
                 return {
                     endpoints: new Decimal(1).add(amt),
-                    updates: new Decimal(2).pow(amt).mul(75000)
+                    updates: new Decimal(2).pow(amt).mul(75)
                 }
             },
             canAfford() {
@@ -243,24 +243,24 @@ addLayer("a", {
             done() { return player[this.layer].points.gte(1) }
         },
         1: {
-            requirementDescription: "2 total API endpoints",
+            requirementDescription: "1 total API endpoints",
             effectDescription: "Buying refactors will buy as many as you can afford",
-            done() { return player[this.layer].points.gte(2) }
+            done() { return player[this.layer].points.gte(1) }
         },
         2: {
-            requirementDescription: "3 total API endpoints",
+            requirementDescription: "1 total API endpoints",
             effectDescription: "Retain all refactors milestones",
-            done() { return player[this.layer].points.gte(3) }
+            done() { return player[this.layer].points.gte(1) }
         },
         3: {
-            requirementDescription: "4 total API endpoints",
+            requirementDescription: "1 total API endpoints",
             effectDescription: "Unlock a new Degree program",
-            done() { return player[this.layer].points.gte(4) }
+            done() { return player[this.layer].points.gte(1) }
         },
         4: {
-            requirementDescription: "5 total API endpoints",
+            requirementDescription: "1 total API endpoints",
             effectDescription: "Row 4 resets don't reset refactorings",
-            done() { return player[this.layer].points.gte(5) }
+            done() { return player[this.layer].points.gte(1) }
         }
     }
 })
