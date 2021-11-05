@@ -25,7 +25,7 @@ addLayer("g", {
     requires: new Decimal(8),
     base: new Decimal(0.1),
     baseAmount() { return player.f.points },
-    exponent: 0.9,
+    exponent: 0.5,
     gainMult() {
         mult = new Decimal(1)
         if (hasUpgrade("l", 15)) mult = mult.div(upgradeEffect("l", 15))
@@ -101,7 +101,7 @@ addLayer("g", {
         21: {
             title: "Trick fans into refactoring for you",
             description: "Use free labor to multiply refactors gain based on your fame",
-            cost: new Decimal(2),
+            cost: new Decimal(1),
             currencyDisplayName: "goodwill",
             currencyInternalName: "unused",
             currencyLocation: () => player.g,
@@ -110,7 +110,7 @@ addLayer("g", {
         22: {
             title: "Hack into college databases",
             description: "Manipulate your GPA to multiply enrollment gain based on your refactors",
-            cost: new Decimal(2),
+            cost: new Decimal(1),
             currencyDisplayName: "goodwill",
             currencyInternalName: "unused",
             currencyLocation: () => player.g,
@@ -119,7 +119,7 @@ addLayer("g", {
         23: {
             title: "Run for Student Government",
             description: "Take advantage of your local colleges to spread the word about your games and multiply fame gain based on enrollments",
-            cost: new Decimal(2),
+            cost: new Decimal(1),
             currencyDisplayName: "goodwill",
             currencyInternalName: "unused",
             currencyLocation: () => player.g,
