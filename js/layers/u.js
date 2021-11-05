@@ -73,7 +73,7 @@ addLayer("u", {
         11: {
             title: "Convince your friend to help",
             description: "Double your productivity by convincing your friend to help with your game",
-            cost: new Decimal(5),
+            cost: new Decimal(1),
             currencyDisplayName: "hours of work",
             currencyInternalName: "points",
             currencyLocation: ""
@@ -87,7 +87,7 @@ addLayer("u", {
         21: {
             title: "Bug fixes count as updates, right?",
             description: "Double your update gain by counting the follow-up bug fixing patch as a separate update",
-            cost: new Decimal(20),
+            cost: new Decimal(1),
             currencyDisplayName: "hours of work",
             currencyInternalName: "points",
             currencyLocation: "",
@@ -96,26 +96,26 @@ addLayer("u", {
         22: {
             title: "Motivation Momentum",
             description: "Increase productivity by how many current updates have been released",
-            cost: new Decimal(3),
+            cost: new Decimal(1),
             effect() { return player.u.points.add(1) },
             unlocked() { return hasUpgrade("u", 12) }
         },
         31: {
             title: "Cosmetics Economy",
             description: "Let the community make and sell cosmetics in-game, giving 10x update gain",
-            cost: new Decimal(25000),
+            cost: new Decimal(1),
             unlocked() { return hasUpgrade("g", 13) && !inChallenge("d", 11) }
         },
         32: {
             title: "Workshop Support",
             description: "Add support for community made mods, squaring update gain",
-            cost: new Decimal(50000),
+            cost: new Decimal(1),
             unlocked() { return hasUpgrade("g", 13) && !inChallenge("d", 11) }
         },
         41: {
             title: "Featured creators",
             description: "Make a featured section for popular community creators, multiplying update gain based on the amount of good will",
-            cost: new Decimal(100000),
+            cost: new Decimal(1),
             effect() {
                 let ret = player.g.unused
                 if (challengeCompletions("d", 12) > 0) ret = ret.add(player.g.points.sub(player.g.unused).div(2))
@@ -126,7 +126,7 @@ addLayer("u", {
         42: {
             title: "Community Updates",
             description: "Bundle a bunch of mods together and release them as an \"update\", raising update gain to a power based on the amount of good will",
-            cost: new Decimal(250000),
+            cost: new Decimal(1),
             effect() {
                 let ret = player.g.unused
                 if (challengeCompletions("d", 12) > 0) ret = ret.add(player.g.points.sub(player.g.unused).div(2))
