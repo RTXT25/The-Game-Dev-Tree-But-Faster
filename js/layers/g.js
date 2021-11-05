@@ -23,7 +23,7 @@ addLayer("g", {
     layerShown() { return player[this.layer].unlocked || player.f.best.gte(6) },
     type: "static",
     requires: new Decimal(8),
-    base: new Decimal(1.25),
+    base: new Decimal(0.1),
     baseAmount() { return player.f.points },
     exponent: 0.9,
     gainMult() {
@@ -133,14 +133,14 @@ addLayer("g", {
             done() { return player[this.layer].points.gte(1) }
         },
         1: {
-            requirementDescription: "2 total good will",
+            requirementDescription: "1 total good will",
             effectDescription: "Start row 4 resets with 1 of each social media account, and unlock a new Degree program",
-            done() { return player[this.layer].points.gte(2) }
+            done() { return player[this.layer].points.gte(1) }
         },
         2: {
-            requirementDescription: "3 total good will",
+            requirementDescription: "1 total good will",
             effectDescription: "Retain fame milestones and upgrades",
-            done() { return player[this.layer].points.gte(3) }
+            done() { return player[this.layer].points.gte(1) }
         }
     },
     respec() {
