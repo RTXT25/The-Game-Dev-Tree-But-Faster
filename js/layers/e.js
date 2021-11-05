@@ -22,7 +22,7 @@ addLayer("e", {
         exp: new Decimal(0)
     }},
     layerShown() { return player[this.layer].unlocked || player.u.best.gte(3) },
-    type: "normal",
+    type: "static",
     requires: new Decimal(5),
     baseAmount() { return player.u.points },
     exponent: 2,
