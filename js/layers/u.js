@@ -69,7 +69,7 @@ addLayer("u", {
     ],
     upgrades: {
         rows: 4,
-        cols: 2,
+        cols: 3,
         11: {
             title: "Convince your friend to help",
             description: "Double your productivity by convincing your friend to help with your game",
@@ -83,6 +83,11 @@ addLayer("u", {
             description: "Increase your productivity by a massive 50% by opening the floodgates to countless open source developers",
             cost: new Decimal(1),
             unlocked() { return hasUpgrade("u", 11) }
+        },
+        13:{
+            title: "GFuel",
+            description: "Increase your produtivity by way to much GFuel",
+            cost: new Decimal(1),
         },
         21: {
             title: "Bug fixes count as updates, right?",
