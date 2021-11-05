@@ -22,7 +22,7 @@ addLayer("u", {
     layerShown: true,
     type: "static",
     requires: new Decimal(5),
-    base: new Decimal(5),
+    base: new Decimal(0.1),
     baseAmount() { return player.points },
     exponent: 0.5,
     gainMult() {
