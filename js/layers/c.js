@@ -108,42 +108,42 @@ addLayer("c", {
         11: {
             title: "Buy premium text editor",
             description: "Purchase a text editor, allowing you to double your productivity",
-            cost: new Decimal(80)
+            cost: new Decimal(1)
         },
         12: {
             title: "Buy premium git client",
             description: "Purchase a git client, allowing you to double your productivity",
-            cost: new Decimal(100)
+            cost: new Decimal(1)
         },
         13: {
             title: "Buy ambient sound machine",
             description: "Purchase an overpriced machine to do a website's job, allowing you to double your productivity",
-            cost: new Decimal(800)
+            cost: new Decimal(1)
         },
         14: {
             title: "Buy Keurig",
             description: "Purchase an overhyped coffee machine, allowing you to double your productivity",
-            cost: new Decimal(1200)
+            cost: new Decimal(1)
         },
         21: {
             title: "Buy incense burner",
             description: "Purchase an overpriced incense burner, allowing you to double your productivity",
-            cost: new Decimal(2500)
+            cost: new Decimal(1)
         },
         22: {
             title: "Buy mechanical keyboard",
             description: "Purchase an overpriced keyboard, allowing you to double your productivity at the expense of your coworkers'",
-            cost: new Decimal(4000)
+            cost: new Decimal(1)
         },
         23: {
             title: "Buy massaging chair",
             description: "Purchase an overpriced chair, allowing you to double your productivity",
-            cost: new Decimal(10000)
+            cost: new Decimal(1)
         },
         24: {
             title: "Buy sensory deprivation egg",
             description: "Purchase an isolation tank, allowing you to double your productivity",
-            cost: new Decimal(100000)
+            cost: new Decimal(1)
         },
         // 1XX represents revenue upgrades
         // since they appear in a different tab they can have whatever id I want to give them,
@@ -155,7 +155,7 @@ addLayer("c", {
             currencyDisplayName: "updates",
             currencyInternalName: "points",
             currencyLocation() { return player.u },
-            cost: new Decimal(10),
+            cost: new Decimal(1),
             unlocked() { return hasUpgrade("e", 13) }
         },
         112: {
@@ -164,7 +164,7 @@ addLayer("c", {
             currencyDisplayName: "updates",
             currencyInternalName: "points",
             currencyLocation() { return player.u },
-            cost: new Decimal(20),
+            cost: new Decimal(100),
             unlocked() { return hasUpgrade("c", 111) }
         },
         113: {
@@ -173,7 +173,7 @@ addLayer("c", {
             currencyDisplayName: "updates",
             currencyInternalName: "points",
             currencyLocation() { return player.u },
-            cost: new Decimal(30),
+            cost: new Decimal(1),
             unlocked() { return hasUpgrade("c", 112) }
         },
         114: {
@@ -182,7 +182,7 @@ addLayer("c", {
             currencyDisplayName: "updates",
             currencyInternalName: "points",
             currencyLocation() { return player.u },
-            cost: new Decimal(40),
+            cost: new Decimal(100),
             unlocked() { return hasUpgrade("c", 113) }
         },
         121: {
@@ -191,7 +191,7 @@ addLayer("c", {
             currencyDisplayName: "updates",
             currencyInternalName: "points",
             currencyLocation() { return player.u },
-            cost: new Decimal(10000),
+            cost: new Decimal(100),
             unlocked() { return hasUpgrade("g", 11) && !inChallenge("d", 11) }
         },
         122: {
@@ -200,7 +200,7 @@ addLayer("c", {
             currencyDisplayName: "updates",
             currencyInternalName: "points",
             currencyLocation() { return player.u },
-            cost: new Decimal(12500),
+            cost: new Decimal(100),
             unlocked() { return hasUpgrade("g", 11) && !inChallenge("d", 11) }
         },
         123: {
@@ -209,7 +209,7 @@ addLayer("c", {
             currencyDisplayName: "updates",
             currencyInternalName: "points",
             currencyLocation() { return player.u },
-            cost: new Decimal(15000),
+            cost: new Decimal(100),
             unlocked() { return hasUpgrade("g", 11) && !inChallenge("d", 11) }
         },
         124: {
@@ -218,7 +218,7 @@ addLayer("c", {
             currencyDisplayName: "updates",
             currencyInternalName: "points",
             currencyLocation() { return player.u },
-            cost: new Decimal(20000),
+            cost: new Decimal(100),
             unlocked() { return hasUpgrade("g", 11) && !inChallenge("d", 11) }
         }
     },
@@ -227,7 +227,7 @@ addLayer("c", {
         cols: 1,
         11: {
             title: "Upgrade hardware",
-            cost() { return new Decimal(100).mul(new Decimal(2).pow(getBuyableAmount("c", 11))).round() },
+            cost() { return new Decimal(2).mul(new Decimal(2).pow(getBuyableAmount("c", 11))).round() },
             display() { return `Each upgrade additively raises your base productivity to the +.25 power.<br/><br/>Currently: ^${format(this.effect())}<br/><br/>Next upgrade cost: ${format(this.cost())} cash` },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             effect() { return new Decimal(0.25).add(buyableEffect("s", 22)).mul(getBuyableAmount("c", 11)).add(1) },
