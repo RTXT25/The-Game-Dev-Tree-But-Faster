@@ -80,7 +80,7 @@ addLayer("t", {
                     return `Double time shards generation.<br/>Currently: ${format(this.effect())}/sec<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Generate time shards.<br/>Currently: ${format(this.effect())}/sec<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(1).pow(1.5)).pow(x || getBuyableAmount(this.layer, this.id)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(1).pow(1.5)).pow(x || getBuyableAmount(this.layer, this.id)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
@@ -101,7 +101,7 @@ addLayer("t", {
                     return `Double how quickly the multiplier to the 1st Ring increases.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Power up the 1st Ring over time.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(2).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(2).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
@@ -123,7 +123,7 @@ addLayer("t", {
                     return `Double how quickly the multiplier to the 2nd Ring increases.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Power up the 2nd Ring over time.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(3).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(3).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
@@ -145,7 +145,7 @@ addLayer("t", {
                     return `Double how quickly the multiplier to the 3rd Ring increases.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Power up the 3rd Ring over time.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(4).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(4).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
@@ -167,7 +167,7 @@ addLayer("t", {
                     return `Double how quickly the multiplier to the 4th Ring increases.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Power up the 4th Ring over time.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(5).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(5).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
@@ -189,7 +189,7 @@ addLayer("t", {
                     return `Double how quickly the multiplier to the 5th Ring increases.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Power up the 5th Ring over time.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(6).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(6).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
@@ -211,7 +211,7 @@ addLayer("t", {
                     return `Double how quickly the multiplier to the 6th Ring increases.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Power up the 6th Ring over time.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(7).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(7).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
@@ -233,7 +233,7 @@ addLayer("t", {
                     return `Double how quickly the multiplier to the 7th Ring increases.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Power up the 7th Ring over time.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(8).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(8).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
@@ -255,7 +255,7 @@ addLayer("t", {
                     return `Double how quickly the multiplier to the 8th Ring increases.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
                 return `Power up the 8th Ring over time.<br/>Currently: ${format(effect.multiplier)}x (+${format(effect.rate)}/sec)<br/>Requires ${formatWhole(this.cost())} time flux.`
             },
-            cost(x) { return new Decimal(2).pow(new Decimal(9).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
+            cost(x) { return new Decimal(1).pow(new Decimal(9).pow(1.5)).pow(Decimal.add(x || getBuyableAmount(this.layer, this.id), 1)) },
             canAfford() { return player[this.layer].points.gte(this.cost()) },
             buy() {
                 player[this.layer].points = player[this.layer].points.sub(this.cost())
