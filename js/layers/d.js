@@ -150,25 +150,25 @@ addLayer("d", {
             done() { return player[this.layer].points.gte(1) }
         },
         1: {
-            requirementDescription: "2 total diplomas",
+            requirementDescription: "1 total diplomas",
             effectDescription: "Resetting either the experience or cash layer gives what would've been gained from both",
-            done() { return player[this.layer].points.gte(2) }
+            done() { return player[this.layer].points.gte(1) }
         },
         2: {
-            requirementDescription: "3 total diplomas",
+            requirementDescription: "1 total diplomas",
             effectDescription: "School resets nothing and is automatically purchased",
-            done() { return player[this.layer].points.gte(3) }
+            done() { return player[this.layer].points.gte(1) }
         },
         3: {
-            requirementDescription: "4 total diplomas",
+            requirementDescription: "1 total diplomas",
             effectDescription: "Automatically take classes you can afford",
             toggles: [["d", "auto-school"]],
-            done() { return player[this.layer].points.gte(4) }
+            done() { return player[this.layer].points.gte(1) }
         },
         4: {
-            requirementDescription: "7 total diplomas",
+            requirementDescription: "1 total diplomas",
             effectDescription: "Unlock Masters Degrees and Thesis Upgrade",
-            done() { return player[this.layer].points.gte(7) },
+            done() { return player[this.layer].points.gte(1) },
             unlocked() { return player.t.unlocked && player.l.unlocked }
         }
     }
